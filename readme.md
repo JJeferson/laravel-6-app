@@ -29,4 +29,4 @@ Gostaria de deixar um adendo a questão da imagem.
 Eu nunca até hoje fiz uso de um componente de captar uma imagem e salva-la num local.
 Com medo de fazer algo feio demais optei por trabalhar no safe, e pegar apenas o caminho
 de destino da imagem numa string pra exibir.
-Possivelmente devo em breve por um componente correto ali em breve.
+Possivelmente devo em breve por um componente correto ali .
