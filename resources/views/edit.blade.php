@@ -27,24 +27,24 @@
 <h2> CRUD com Laravel - Teste 15/07/2020</h2>
 </br>
 
-<form name="formEdit" id="formEdit" method="post" action="{{url('users/$id')}}">
-@methord('PUT')
+<form name="formEdit" id="formEdit" method="post" action="{{url("users/$user->id")}}">
+@method('PUT')
 @csrf
 <div class="form-group">
-<input type="name" class="form-control" id="nome" name="nome"  value="{{$users->nome}}" required="requiored">
+<input type="name" class="form-control" id="nome" name="nome"  value="{{$user->nome}}" required="requiored">
 </div>
 
 <div class="form-group">
-<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="requiored">
+<input type="email" class="form-control" id="email" name="email" value="{{$user->email}}" required="requiored">
 </div>
 <div class="form-group">
-<input type="text" class="form-control" onkeyup="somenteNumeros(this);"  id="telefone" name="telefone" placeholder="Telefone" required="requiored">
+<input type="text" class="form-control" onkeyup="somenteNumeros(this);"  id="telefone" name="telefone" value="{{$user->telefone}}" required="requiored">
 </div>
 <div class="form-group">
-<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
+<input type="password" class="form-control" id="senha" name="senha" value="{{$user->senha}}" required="requiored">
 </div>
 <div class="form-group">
-<input type="text" class="form-control" id="foto" name="foto" placeholder="Caminho para foto" required="requiored">
+<input type="text" class="form-control" id="foto" name="foto" value="{{$user->foto}}" required="requiored">
 </div>
 
 <button type="submit" class="btn btn-success form-control">Gravar alterações</button>

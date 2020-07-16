@@ -72,7 +72,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user=$this->objUser->find($id);
-        return view ('edit',compact('users'));
+        return view ('edit',compact('user'));
     }
 
     /**
@@ -84,7 +84,15 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->objUser->where(['id'=>$id])->update([
+            'nome'=>$request->nome,
+            'email'=>$request->email,
+            'telefone'=>$request->telefone,
+            'senha'=>$request->senha,
+            'foto'=>$request->foto
+        ]);
+
+        return redirect('users');
     }
 
     /**
