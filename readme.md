@@ -12,5 +12,5 @@ Para usar:
 5)Dito isso é só rodar no cmd o php artisan serve e acessar o http://localhost:8000/users
 
 
- A aplicação já esta gravando, editando e listando.
+ A aplicação esta com CRUD completo. Listagem, inclusão, edicção e exclusão.
  Falta só implementar a exclusão.
