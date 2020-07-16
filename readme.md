@@ -13,4 +13,4 @@ Para usar:
 
 
  A aplicação esta com CRUD completo. Listagem, inclusão, edicção e exclusão.
- Falta só implementar a exclusão.
+ 
