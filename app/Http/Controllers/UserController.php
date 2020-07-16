@@ -103,6 +103,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $del=$this->objUser->destroy($id);
+        return($del)?"sim":"nao";
     }
 }

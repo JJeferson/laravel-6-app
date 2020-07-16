@@ -3,6 +3,7 @@
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +11,7 @@
         <title>Teste CRUD</title>
     </head>
 <body>
+
 
 <div class="container">
 </br>
@@ -21,6 +23,7 @@
       </a>
 
 <div class="col-8 m-auto">
+@csrf
 <table class="table">
   <thead>
     <tr>
@@ -41,13 +44,13 @@
       <td>{{$users->email}}</td>
       <td>{{$users->telefone}}</td>
       <td>
-      <img src="{{$users->foto}}" width="20%" >
+      <img  src="{{$users->foto}}" width="20%" >
       </td>
       <td>
       <a href="{{url("users/$users->id/edit")}}">
       <button type="button" class="btn btn-warning">Editar</button>
       </a>
-      <a href="">
+      <a  class="js-del"  href="{{url("users/$users->id")}}"  >
       <button type="button" class="btn btn-danger">Excluir</button>
       </a>
 
@@ -61,5 +64,5 @@
 </div>
 
 </body>
-
+<script src="{{url("assets/js/javascript.js")}}"></script>
 </html>
