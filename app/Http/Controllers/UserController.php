@@ -29,7 +29,7 @@ class UserController extends Controller
      */
     public function create()
     {
-
+        return view ('create');
     }
 
     /**
@@ -44,9 +44,12 @@ class UserController extends Controller
         $this ->objUser->create([
            'nome'=>$request->nome,
            'email'=>$request->email,
+           'telefone'=>$request->telefone,
+           'senha'=>$request->senha,
            'foto'=>$request->foto
 
         ]);
+         return redirect('index');
     }
 
     /**

@@ -1,0 +1,48 @@
+
+//cria projeto com laravel
+composer create-project --prefer-dist laravel/laravel laravel-6-app
+// inicia servidor
+php artisan serve
+//criando modelo - classe que recebe do banco de dados
+php artisan make:model cadusuario -m
+
+// arquivo .env
+faz a conexão com o banco de dados
+
+//criando tabela e campos no banco de dados.
+--database\migration\
+cria a classe
+dentro de app vai ter um .php de mesmo nome da classe ajustar la tbm
+
+php artisan migrate
+
+
+------------------------------------
+
+php artisan make:controller UserController --resource
+
+
+{
+
+}
+
+class cadusuario extends Model
+{
+    protected $fillable = [
+        'nome', 'email','senha', 'telefone' ,'foto'
+    ];
+}
+
+ `updated_at`, `created_at`
+
+
+        Schema::create('cadusuarios', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nome');
+            $table->string('email')->unique();
+            $table->string('senha');
+            $table->string('telefone');
+            $table->string('foto');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
+        });

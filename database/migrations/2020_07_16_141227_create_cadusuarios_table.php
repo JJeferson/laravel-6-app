@@ -20,6 +20,8 @@ class CreateCadusuariosTable extends Migration
             $table->string('senha');
             $table->string('telefone');
             $table->string('foto');
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('created_at')->nullable();
         });
     }
 
