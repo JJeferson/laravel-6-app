@@ -44,7 +44,7 @@
       <img src="{{$users->foto}}" width="20%" >
       </td>
       <td>
-      <a href="">
+      <a href="{{url("users/$users->id/edit")}}">
       <button type="button" class="btn btn-warning">Editar</button>
       </a>
       <a href="">

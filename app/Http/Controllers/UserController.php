@@ -49,7 +49,7 @@ class UserController extends Controller
            'foto'=>$request->foto
 
         ]);
-         return redirect('index');
+         return redirect('users');
     }
 
     /**
@@ -71,7 +71,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user=$this->objUser->find($id);
+        return view ('edit',compact('users'));
     }
 
     /**

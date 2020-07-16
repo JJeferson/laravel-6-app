@@ -11,12 +11,5 @@
 |
 */
 
-Route::get('/', 'UserController@index');
-
-
-Auth::routes();
-
-
+Route::resource('/users','UserController');
 Route::get('/create', 'UserController@create');
-Route::post('/users', 'UserController@store');
-Route::get('/index', 'UserController@index');

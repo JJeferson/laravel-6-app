@@ -46,3 +46,18 @@ class cadusuario extends Model
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('created_at')->nullable();
         });
+
+
+
+
+Route::get('/', 'UserController@index');
+
+
+Auth::routes();
+
+
+Route::get('/create', 'UserController@create');
+Route::post('/users', 'UserController@store');
+Route::get('/index', 'UserController@index');
+
+Route::post('/users/$id/edit', 'UserController@edit');
