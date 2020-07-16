@@ -30,3 +30,7 @@ Eu nunca até hoje fiz uso de um componente de captar uma imagem e salva-la num 
 Com medo de fazer algo feio demais optei por trabalhar no safe, e pegar apenas o caminho
 de destino da imagem numa string pra exibir.
 
+
+
+
+
